@@ -9,10 +9,14 @@ class SharedPrefManager(context: Context) {
 
     val sp: SharedPreferences = context.getSharedPreferences("dataSP", Context.MODE_PRIVATE)
 
-    fun saveCategories(categories: ArrayList<Category>) {
+    fun simpanKeSP(categories: ArrayList<Category>) {
         val gson = Gson()
         val json = gson.toJson(categories)
         sp.edit().putString("spCategory", json).apply()
+    }
+
+    fun saveCategories(categories: ArrayList<Category>) {
+        simpanKeSP(categories)
     }
 
     fun getCategories(): ArrayList<Category> {
@@ -53,10 +57,14 @@ class SharedPrefManager(context: Context) {
         return ArrayList(filtered)
     }
 
-    fun saveTransactions(transactions: ArrayList<Transaction>) {
+    fun simpanTransaksiKeSP(transactions: ArrayList<Transaction>) {
         val gson = Gson()
         val json = gson.toJson(transactions)
         sp.edit().putString("spTransaction", json).apply()
+    }
+
+    fun saveTransactions(transactions: ArrayList<Transaction>) {
+        simpanTransaksiKeSP(transactions)
     }
 
     fun getTransactions(): ArrayList<Transaction> {
@@ -119,5 +127,9 @@ class SharedPrefManager(context: Context) {
 
     fun getBalance(): Double {
         return getTotalIncome() - getTotalExpense()
+    }
+
+    fun clearAllData() {
+        sp.edit().clear().apply()
     }
 }
