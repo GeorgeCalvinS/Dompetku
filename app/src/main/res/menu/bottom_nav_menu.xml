@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/dashboardFragment"
+        android:icon="@drawable/dashboard"
+        android:title="Dashboard" />
+
+    <item
+        android:id="@+id/categoryFragment"
+        android:icon="@drawable/category"
+        android:title="Kategori" />
+
+    <item
+        android:id="@+id/transactionFragment"
+        android:icon="@drawable/transaction"
+        android:title="Transaksi" />
+
+    <item
+        android:id="@+id/balanceFragment"
+        android:icon="@drawable/wallet"
+        android:title="Saldo" />
+
+    <item
+        android:id="@+id/reportFragment"
+        android:icon="@drawable/report"
+        android:title="Laporan" />
+
+</menu>

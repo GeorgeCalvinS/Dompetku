@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/dashboardFragment">
+
+    <fragment
+        android:id="@+id/dashboardFragment"
+        android:name="com.example.dompetku.DashboardFragment"
+        android:label="Dashboard"
+        tools:layout="@layout/fragment_dashboard">
+        <action
+            android:id="@+id/action_dashboard_to_income"
+            app:destination="@id/incomeFragment" />
+        <action
+            android:id="@+id/action_dashboard_to_expense"
+            app:destination="@id/expenseFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/categoryFragment"
+        android:name="com.example.dompetku.CategoryFragment"
+        android:label="Kategori"
+        tools:layout="@layout/fragment_category" />
+
+    <fragment
+        android:id="@+id/incomeFragment"
+        android:name="com.example.dompetku.IncomeFragment"
+        android:label="Pemasukan"
+        tools:layout="@layout/fragment_income" />
+
+    <fragment
+        android:id="@+id/expenseFragment"
+        android:name="com.example.dompetku.ExpenseFragment"
+        android:label="Pengeluaran"
+        tools:layout="@layout/fragment_expense" />
+
+    <fragment
+        android:id="@+id/transactionFragment"
+        android:name="com.example.dompetku.TransactionFragment"
+        android:label="Transaksi"
+        tools:layout="@layout/fragment_transaction">
+        <action
+            android:id="@+id/action_transaction_to_income"
+            app:destination="@id/incomeFragment" />
+        <action
+            android:id="@+id/action_transaction_to_expense"
+            app:destination="@id/expenseFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/balanceFragment"
+        android:name="com.example.dompetku.BalanceFragment"
+        android:label="Saldo"
+        tools:layout="@layout/fragment_balance" />
+
+    <fragment
+        android:id="@+id/reportFragment"
+        android:name="com.example.dompetku.ReportFragment"
+        android:label="Laporan"
+        tools:layout="@layout/fragment_report" />
+
+</navigation>
